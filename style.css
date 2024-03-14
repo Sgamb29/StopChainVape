@@ -1,0 +1,17 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.mainBtn {
+    width: 100%;
+    height: 75vh;
+    font-size: 500%;
+}
+
+.resetBtn {
+    width: 100%;
+    font-size: 200%;
+}
