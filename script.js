@@ -1,5 +1,5 @@
 
-let thirtysec = 1000 * 30;
+let timerTime = 1000 * 30;
 let output = document.getElementById("output");
 let firstPress = true;
 
@@ -22,6 +22,7 @@ async function startTime() {
     }
     if (firstPress) {
         firstPress = false;
+        setTimerTime();
         draws += 1;
         output.innerText = `Wait and breathe. Total Draws: ${draws}`;
         setTimeout(() => {
@@ -35,7 +36,7 @@ async function startTime() {
             output.innerText = "Inhale and then press the button.";
             firstPress = true;
             console.log("ran");
-        }, thirtysec);
+        }, timerTime);
     };
       }
 
@@ -67,7 +68,7 @@ loopToggle.addEventListener("click", (e) => {
             mainBtn.className = mainBtn.className === blueClass ? greenClass : blueClass;
             draws += 1;
             output.innerText = `Total Draws: ${draws}`;
-        }, thirtysec + 3000);
+        }, timerTime + 3000);
     } else {
         clearInterval(intervalId);
         loopInfo.hidden = true;
@@ -77,6 +78,11 @@ loopToggle.addEventListener("click", (e) => {
     }
 })
 
-async function loop() {
 
+function setTimerTime() {
+    const value = document.getElementById("timeChooser").value;
+    if (parseInt(value) != NaN) {
+        document.getElementById("titleText").innerText = value + " Second Timer To Help You Pace Yourself";
+        timerTime = parseInt(value) * 1000;
+    }
 }

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Thirty Second Timer To Help Pace Yourself</h1>
+    <h1 id="titleText">30 Second Timer To Help Pace Yourself</h1>
     <div class="options">
     <div>
         <input type="checkbox" id="audioToggle" checked />
@@ -18,7 +18,11 @@
         <label for="loopToggle">Loop</label>
     </div>
 
+
     </div>
+    <label for="timeChooser">Input Seconds for Timer</label>
+    <input type="number" id="timeChooser" value="30" onchange="setTimerTime()">
+
     <h4 id="loopInfo" hidden="true">Loop enabled, look for button color change or listen for audio.</h4>
 
     <h3 id="output">Inhale and then press the button.</h3>
