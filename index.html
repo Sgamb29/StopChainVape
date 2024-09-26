@@ -22,10 +22,12 @@
     </div>
     <label for="timeChooser">Input Seconds for Timer</label>
     <input type="number" id="timeChooser" value="30" onchange="setTimerTime()">
+    <p id="hint"></p>
 
     <h4 id="loopInfo" hidden="true">Loop enabled, look for button color change or listen for audio.</h4>
 
     <h3 id="output">Inhale and then press the button.</h3>
+    <h4 id="countdownOutput"></h4>
     <button class="mainBtn" id="mainBtn" onclick="startTime()">[+]</button>
     <button class="resetBtn" onclick="refresh()">Reset</button>
 
